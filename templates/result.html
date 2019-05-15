@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <ehader>
+            <div class="container">
+                <div id="brandname">
+                    SSG-PAM
+                </div>
+                <h2>SPAM 메시지를 쓰윽</h2>
+            </div>
+        </ehader>
+        <p sylte="color:blue;font-size:20;text-align:cetner;"><b>결과</b></p>
+        <div class="results">
+            {% if prediction == 1 %}
+            <h2 style="color:red;">스팸입니다.</h2>
+            {% elif prediction == 0%}
+            <h2 style="color:blue;">스팸이 아닙니다.</h2>
+            {% endif %}
+        </div>
+    </body>
+</html>

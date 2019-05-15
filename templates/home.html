@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SSG-PAM</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body style="text-align: cetner;">
+        <header>
+            <div class="container">
+                <div id = "brandname">
+                    SSG-PAM
+                </div>
+                <h2>스팸 문자를 쓰-윽</h2>
+            </div>
+        </header>
+        
+        <div class="ml-container">
+            <form action="{{ url_for('predict') }}" method="POST">
+                <p>메시지를 입력하세요!</p>
+                <textarea name="message" rows="4" cols="50"></textarea>
+                <br/>
+                <input type="submit" class="btn-info" value="predict">
+            </form>
+        </div>
+    </body>
+</html>
